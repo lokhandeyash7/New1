@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Online Webinar</title>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+        
+        .container {
+          max-width: 400px;
+          margin: 0 auto;
+          padding: 20px;
+        }
+        
+        h1 {
+          text-align: center;
+        }
+        
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="submit"] {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+        
+        input[type="submit"] {
+          background-color: #4CAF50;
+          color: white;
+          cursor: pointer;
+        }
+        
+        .error {
+          color: red;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <h1>Online Webinar</h1>
+        
+        <div id="loginForm">
+          <h2>Login</h2>
+          <form id="login" onsubmit="return login()">
+            <input type="text" id="loginUsername" placeholder="Username" required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <input type="submit" value="Login">
+          </form>
+        </div>
+        
+        <div id="registerForm" style="display: none;">
+          <h2>Register</h2>
+          <form id="register" onsubmit="return register()">
+            <input type="text" id="registerUsername" placeholder="Username" required>
+            <input type="email" id="registerEmail" placeholder="Email" required>
+            <input type="password" id="registerPassword" placeholder="Password" required>
+            <input type="submit" value="Register">
+          </form>
+        </div>
+        
+        <p id="errorMessage" class="error"></p>
+        
+        <p>Don't have an account? <a href="#" onclick="toggleForm()">Register here</a></p>
+      </div>
+      
+      <script>
+        function toggleForm() {
+          var loginForm = document.getElementById("loginForm");
+          var registerForm = document.getElementById("registerForm");
+          
+          if (loginForm.style.display === "none") {
+            loginForm.style.display = "block";
+            registerForm.style.display = "none";
+          } else {
+            loginForm.style.display = "none";
+            registerForm.style.display = "block";
+          }
+          
+          document.getElementById("errorMessage").innerHTML = "";
+        }
+        
+        function login() {
+          var username = document.getElementById("loginUsername").value;
+          var password = document.getElementById("loginPassword").value;
+          
+          // Perform login validation here
+          
+          if (username === "admin" && password === "password") {
+            alert("Login successful!");
+            return true;
+          } else {
+            document.getElementById("errorMessage").innerHTML = "Invalid username or password";
+            return false;
+          }
+        }
+        
+        function register() {
+          var username = document.getElementById("registerUsername").value;
+          var email = document.getElementById("registerEmail").value;
+          var password = document.getElementById("registerPassword").value;
+          
+          // Perform registration here
+          
+          alert("Registration successful!");
+          window.location.href = "nextpage.html"; // Redirect to the next page
+          
+          return true;
+        }
+      </script>
+    </body>
+    </html>
+</html>

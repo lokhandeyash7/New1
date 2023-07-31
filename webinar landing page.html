@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Webinar Landing Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    
+    header {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    h1 {
+      margin: 0;
+    }
+    
+    section {
+      padding: 50px;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 20px;
+    }
+    
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    input[type="submit"] {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    footer {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Webinar Landing Page</h1>
+  </header>
+  
+  <section id="webinar1">
+    <h2>Webinar 1: Machine Learning </h2>
+    <img src="D:\Webpage\machine learning.png" alt="machine learning.png" >
+    <h3>Join Our Webinar</h3>
+    <p>Date: 28 FEB , 2023</p>
+    <p>Time: 5:00 PM - 6:00 PM</p>
+    <p>Location: Online</p>
+    <p>Unlock the potential of tomorrow's technology with our online webinar on Machine Learning. Join industry experts as we delve into the fascinating world of AI, exploring cutting-edge algorithms and real-world applications. Gain invaluable insights and stay ahead in the ever-evolving landscape of artificial intelligence.</p>
+    <form>
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="submit" value="Register">
+    </form>
+  </section>
+  
+  <section id="webinar2">
+    <h2>Webinar 2: IoT(Internet of Things)</h2>
+    <img src="D:\Webpage\iot.jpeg" alt="iot.jpeg" >
+    <h3>Join Our Webinar</h3>
+    <p>Date: August 10, 2023</p>
+    <p>Time: 3:00 PM - 4:30 PM</p>
+    <p>Location: Online</p>
+    <p>Discover the boundless possibilities of the Internet of Things (IoT) in our engaging online webinar. Join us as we explore the transformative impact of connected devices, smart technologies, and data-driven insights. Embrace the future of interconnected systems and learn how IoT is reshaping industries and enhancing lives.</p>
+    <form>
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="submit" value="Register">
+    </form>
+  </section>
+  
+  <section id="webinar3">
+    <h2>Webinar 3:Designing</h2>
+    <img src="D:\Webpage\design.jpeg" alt="design.jpeg" >
+    <h3>Join Our Webinar</h3>
+    <p>Date: August 20, 2023</p>
+    <p>Time: 4:00 PM - 5:30 PM</p>
+    <p>Location: Online</p>
+    <p>Unleash your creativity and join our captivating online webinar on Design. Delve into the art of aesthetics, user-centricity, and innovation as we unravel the secrets to crafting visually stunning and functionally exceptional experiences. Whether you're a seasoned designer or an aspiring enthusiast, this webinar promises to inspire and elevate your design prowess to new heights</p>
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="submit" value="Register">
+    </form>
+  </section>
+  
+  <footer>
+    &copy; 2023 Webinar Landing Page. All rights reserved.
+  </footer>
+  <head>
+    <title>Online Webinar</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      
+      h1 {
+        text-align: center;
+      }
+      
+      input[type="text"],
+      input[type="password"],
+      input[type="email"],
+      input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+      }
+      
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Online Webinar</h1>
+      
+      <div id="loginForm">
+        <h2>Login</h2>
+        <form id="login" onsubmit="return login()">
+          <input type="text" id="loginUsername" placeholder="Username" required>
+          <input type="password" id="loginPassword" placeholder="Password" required>
+          <input type="submit" value="Login">
+        </form>
+      </div>
+      
+      <div id="registerForm" style="display: none;">
+        <h2>Register</h2>
+        <form id="register" onsubmit="return register()">
+          <input type="text" id="registerUsername" placeholder="Username" required>
+          <input type="email" id="registerEmail" placeholder="Email" required>
+          <input type="password" id="registerPassword" placeholder="Password" required>
+          <input type="submit" value="Register">
+        </form>
+      </div>
+      
+      <p id="errorMessage" class="error"></p>
+      
+      <p>Don't have an account? <a href="#" onclick="toggleForm()">Register here</a></p>
+    </div>
+    
+    <script>
+      function toggleForm() {
+        var loginForm = document.getElementById("loginForm");
+        var registerForm = document.getElementById("registerForm");
+        
+        if (loginForm.style.display === "none") {
+          loginForm.style.display = "block";
+          registerForm.style.display = "none";
+        } else {
+          loginForm.style.display = "none";
+          registerForm.style.display = "block";
+        }
+        
+        document.getElementById("errorMessage").innerHTML = "";
+      }
+      
+      function login() {
+        var username = document.getElementById("loginUsername").value;
+        var password = document.getElementById("loginPassword").value;
+        
+        // Perform login validation here
+        
+        if (username === "admin" && password === "password") {
+          alert("Login successful!");
+          return true;
+        } else {
+          document.getElementById("errorMessage").innerHTML = "Invalid username or password";
+          return false;
+        }
+      }
+      
+      function register() {
+        var username = document.getElementById("registerUsername").value;
+        var email = document.getElementById("registerEmail").value;
+        var password = document.getElementById("registerPassword").value;
+        
+        // Perform registration here
+        
+        alert("Registration successful!");
+        return true;
+      }
+    </script>
+  </body>
+</body>
+</html>
